@@ -7,6 +7,7 @@ public class Flowers extends GroceryItems{
 	private String variety;
 	private String color;
 	private String arrangement;
+	private double flowerPrice;
 	
 	public Flowers (String n, int q, double b, String v, String c, String a) {
 		setName(n); 
@@ -39,6 +40,7 @@ public class Flowers extends GroceryItems{
 	public String getColor() {
 		return color;
 	} 
-}
 
+
+}
 	

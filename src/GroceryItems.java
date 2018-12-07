@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+
 import javax.swing.JOptionPane; 
 
 public class GroceryItems {
@@ -12,7 +14,7 @@ public class GroceryItems {
 	}
 	public void setUnitPrice(double u) {
 		if (u > 0) {
-			unitPrice = (u + (u * .15));
+			unitPrice = u;
 		}
 		else {
 			unitPrice = 5; 
@@ -35,7 +37,9 @@ public class GroceryItems {
 		return name;
 	}
 	public String toString() {
-		return "is a" + getName() + "with a unit price of" + getUnitPrice() + "and a quantity of" + getQuantity(); 
+		NumberFormat formatter = NumberFormat.getCurrencyInstance();
+		String unitString = formatter.format(unitPrice);
+		return "is a" + getName() + "with a unit price of" + unitString + "and a quantity of" + getQuantity(); 
 	}
 
 }
