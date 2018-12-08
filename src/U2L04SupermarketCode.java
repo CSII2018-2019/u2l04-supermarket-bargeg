@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+
 import javax.swing.JOptionPane;
 
 public class U2L04SupermarketCode {
@@ -19,7 +21,9 @@ public class U2L04SupermarketCode {
 			int canValue = Integer.parseInt(cans1);
 			int newQuantity = can1.getQuantity() - canValue;
 			double overallPrice = can1.getUnitPrice() * (double) canValue;
-			System.out.println("The total cost of " + canValue + " cans of tomato soup is: $" + overallPrice + ". The remanining quantity is: " + newQuantity);
+			NumberFormat formatter = NumberFormat.getCurrencyInstance();
+			String canString = formatter.format(overallPrice);
+			System.out.println("The total cost of " + canValue + " cans of tomato soup is: " + canString + ". The remanining quantity is: " + newQuantity);
 		}else {
 			JOptionPane.showMessageDialog(null, "Ok, so no tomato soup");
 		}
@@ -29,7 +33,9 @@ public class U2L04SupermarketCode {
 			int flowerValue = Integer.parseInt(flowers1);
 			int newQuantity2 = flower1.getQuantity() - flowerValue;
 			double overallPrice2 = flower1.getUnitPrice() * (double) flowerValue;
-			System.out.println("The total cost of " + flowerValue + " roses is: $" + overallPrice2 + ". The remanining quantity is: " + newQuantity2);
+			NumberFormat formatter = NumberFormat.getCurrencyInstance();
+			String unitString2 = formatter.format(overallPrice2);
+			System.out.println("The total cost of " + flowerValue + " roses is: " + unitString2 + ". The remanining quantity is: " + newQuantity2);
 		}else {
 			JOptionPane.showMessageDialog(null, "Ok, so no roses");
 		}
@@ -39,7 +45,9 @@ public class U2L04SupermarketCode {
 			int tomatoValue = Integer.parseInt(produce1);
 			int newQuantity3 = tomato.getQuantity()- tomatoValue;
 			double overallPrice3 = tomato.getUnitPrice() * (double) tomatoValue;
-			System.out.println("The total cost of " + tomatoValue + " tomatoes is: $" + overallPrice3 + ". The remanining quantity is: " + newQuantity3);
+			NumberFormat formatter = NumberFormat.getCurrencyInstance();
+			String tomatoString = formatter.format(overallPrice3);
+			System.out.println("The total cost of " + tomatoValue + " tomatoes is: " + tomatoString + ". The remanining quantity is: " + newQuantity3);
 		}else {
 			JOptionPane.showMessageDialog(null, "Ok, so no tomatoes");
 		}
@@ -49,7 +57,9 @@ public class U2L04SupermarketCode {
 			int can2Val = Integer.parseInt(cans2);
 			int newQuantity4 = soup1.getQuantity() - can2Val;
 			double overallPrice4 = soup1.getUnitPrice() * (double) can2Val;
-			System.out.println("The total cost of " + can2Val + " cans of wedding soup is: $" + overallPrice4 + ". The remanining quantity is: " + newQuantity4);
+			NumberFormat formatter = NumberFormat.getCurrencyInstance();
+			String weddingString = formatter.format(overallPrice4);
+			System.out.println("The total cost of " + can2Val + " cans of wedding soup is: " + weddingString + ". The remanining quantity is: " + newQuantity4);
 		}else {
 			JOptionPane.showMessageDialog(null, "Ok, so no wedding soup");
 		}
@@ -59,7 +69,9 @@ public class U2L04SupermarketCode {
 			int lettuceVal = Integer.parseInt(produce2);
 			int newQuantity5 = lettuce.getQuantity() - lettuceVal;
 			double overallPrice5 = lettuce.getPrice() * (double) lettuceVal;
-			System.out.println("The total cost of " + lettuceVal + " bunches of lettuce is: $" + overallPrice5 + ". The remanining quantity is: " + newQuantity5);
+			NumberFormat formatter = NumberFormat.getCurrencyInstance();
+			String unitString1 = formatter.format(overallPrice5);
+			System.out.println("The total cost of " + lettuceVal + " bunches of lettuce is: " + unitString1 + ". The remanining quantity is: " + newQuantity5);
 		}else {
 			JOptionPane.showMessageDialog(null, "Ok, so no lettuce");
 		}
